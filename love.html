@@ -1,0 +1,32 @@
+---
+layout: default
+title: "Love Calculator - Fun Love Percentage by Names"
+description: "Fun love calculator: enter two names to see a love percentage. For entertainment only."
+nav: love
+calc: love
+scripts: [love.js]
+---
+<section class="page-hero"><h1>Love Calculator</h1><p class="lead">Enter two names and see your fun love score. Just for entertainment!</p></section>
+<form class="tool" id="loveForm">
+<div class="love-form">
+<div><label for="n1">Your name</label><input id="n1" name="n1" maxlength="40" placeholder="e.g. Aman" autocomplete="off"></div>
+<div><label for="n2">Their name</label><input id="n2" name="n2" maxlength="40" placeholder="e.g. Priya" autocomplete="off"></div>
+</div>
+<p style="text-align:center;margin:16px 0 0"><button class="btn" type="submit">Calculate Love %</button></p>
+<div id="loveResult" aria-live="polite"></div>
+</form>
+<article class="content">
+<h2>What is the love calculator?</h2>
+<p>The love calculator is a playful tool that turns two names into a “love percentage”. It is a popular party game and a fun way to start a conversation with friends. The score is produced by a simple formula that mixes the letters of both names, so the same two names always give the same result, whichever order you type them in.</p>
+<div class="callout"><strong>Just for fun:</strong> this calculator is entertainment only. It has no scientific basis and cannot measure or predict real feelings or compatibility. Please do not take the result seriously.</div>
+<h2>What really makes relationships work</h2>
+<p>Psychologists who study long-lasting relationships often point to a few habits that matter far more than any score:</p>
+<ul>
+<li><strong>Honest communication:</strong> talk about small worries before they become big ones.</li>
+<li><strong>Respect and kindness:</strong> notice and appreciate everyday efforts.</li>
+<li><strong>Shared time:</strong> make room for activities you both enjoy.</li>
+<li><strong>Trust and support:</strong> back each other’s goals and bounce back from disagreements together.</li>
+</ul>
+<h2>Ideas to use the result</h2>
+<p>Try it with friends at a gathering, add a fun twist to a birthday message, or use it as an icebreaker in a group chat. If your score is low, laugh about it. If it is high, enjoy the compliment.</p>
+<h2>Frequently Asked Questions</h2><details><summary>Is the love percentage accurate?</summary><p>No. It is a game. The percentage is calculated from the letters in the two names and is not a real measure of compatibility.</p></details><details><summary>Why do I always get the same result?</summary><p>The formula is fixed, so the same pair of names always gives the same score. Try a nickname or a full name for a different result.</p></details><details><summary>Do you store the names I enter?</summary><p>No. The calculation happens in your browser and the names are not sent anywhere.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the love percentage accurate?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a game. The percentage is calculated from the letters in the two names and is not a real measure of compatibility."}}, {"@type": "Question", "name": "Why do I always get the same result?", "acceptedAnswer": {"@type": "Answer", "text": "The formula is fixed, so the same pair of names always gives the same score. Try a nickname or a full name for a different result."}}, {"@type": "Question", "name": "Do you store the names I enter?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation happens in your browser and the names are not sent anywhere."}}]}</script></article><h2 class="section-title">More Calculators</h2><div class="cards"><a class="card " href="{{ '/standard.html' | relative_url }}"><div class="ico"><div class="ico-std"><span>×</span><span>=</span><span></span><span>−</span><span>÷</span><span>+</span></div></div><h3>Standard Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/fractions.html' | relative_url }}"><div class="ico"><span class="ico-frac">½<small>0.5</small></span></div><h3>Fractions Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/' | relative_url }}#calculator"><div class="ico"><span class="ico-sci">π √x<br>x² LOG</span></div><h3>Scientific Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/graphing.html' | relative_url }}"><div class="ico"><svg width="90" height="80" viewBox="0 0 90 80" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6v66h74"/><path d="M18 56C26 14 38 14 46 40s20 22 30 -4"/></svg></div><h3>Graphing Calculator</h3><small>MATH</small></a><a class="card blue" href="{{ '/percentage.html' | relative_url }}"><div class="ico"><span class="ico-pct">%</span></div><h3>Percentage Calculator</h3><small>MATH</small></a></div>

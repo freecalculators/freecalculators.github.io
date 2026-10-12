@@ -1,0 +1,38 @@
+# ------------------------------------------------------------------
+# Site settings. After you connect your own domain, change ONLY these
+# two lines (see HOW-TO-ADD-POST.md, "When you connect your domain"):
+#
+#     url: "https://your-domain.com"
+#     baseurl: ""
+#
+# While the site lives at freecalculators.github.io keep them as they are.
+# ------------------------------------------------------------------
+url: "https://freecalculators.github.io"
+baseurl: ""
+
+title: CalcZone
+description: "Free online calculators for school, work and everyday life: scientific, standard, fractions, graphing, percentage and more."
+
+# Posts: URL becomes /blog/your-post-name/
+permalink: /blog/:title/
+
+# Show posts dated today or earlier without waiting for a timezone cut-off.
+future: true
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      nav: "blog"
+
+# Files that are for you, not for visitors
+exclude:
+  - HOW-TO-ADD-POST.md
+  - README.md
+  - build

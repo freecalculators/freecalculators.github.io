@@ -1,0 +1,42 @@
+---
+layout: default
+title: "Standard Calculator Online - Free Basic Calculator"
+description: "Free online standard calculator for addition, subtraction, multiplication, division and percentages, with history and keyboard support."
+nav: standard
+calc: standard
+scripts: [engine.js, calc.js]
+---
+<section class="page-hero"><h1>Standard Calculator</h1><p class="lead">A simple, fast calculator for everyday addition, subtraction, multiplication, division and percentages.</p></section><div class="calc-wrap"><div class="calc std"><div class="disp"><div class="disp-bar"><button type="button" class="hist-btn" aria-label="History" title="History">&#x21BA;</button>
+<button type="button" class="del-btn" aria-label="Backspace" title="Backspace">&#x232B;</button></div>
+<div class="disp-expr" aria-live="polite"></div><div class="disp-main" aria-live="polite">0</div></div>
+<div class="hist-panel" hidden></div><div class="keys k4"><button type="button" class="key fn" data-k="AC">AC</button><button type="button" class="key fn" data-k="(">(</button><button type="button" class="key fn" data-k=")">)</button><button type="button" class="key fn" data-k="÷">÷</button><button type="button" class="key " data-k="7">7</button><button type="button" class="key " data-k="8">8</button><button type="button" class="key " data-k="9">9</button><button type="button" class="key fn" data-k="×">×</button><button type="button" class="key " data-k="4">4</button><button type="button" class="key " data-k="5">5</button><button type="button" class="key " data-k="6">6</button><button type="button" class="key fn" data-k="−">−</button><button type="button" class="key " data-k="1">1</button><button type="button" class="key " data-k="2">2</button><button type="button" class="key " data-k="3">3</button><button type="button" class="key fn" data-k="+">+</button><button type="button" class="key " data-k="0">0</button><button type="button" class="key " data-k=".">.</button><button type="button" class="key fn" data-k="%">%</button><button type="button" class="key eq" data-k="=">=</button></div></div></div>
+<article class="content">
+<h2>About the standard calculator</h2>
+<p>The standard calculator covers the four basic operations plus brackets, which is everything most people need for shopping totals, bills, homework checks and quick estimates. It follows the normal order of operations, so multiplication and division are done before addition and subtraction. You can type on your keyboard or tap the buttons.</p>
+<h2>Using percentages</h2>
+<p>This calculator understands percentages the way people use them in daily life. Type the base amount, an operator and the percentage, then press equals.</p>
+<table>
+<tr><th>Question</th><th>Type</th><th>Result</th></tr>
+<tr><td>Add 10% tax to 200</td><td><code>200+10%</code></td><td>220</td></tr>
+<tr><td>Take 15% off 80</td><td><code>80−15%</code></td><td>68</td></tr>
+<tr><td>What is 20% of 450?</td><td><code>450×20%</code></td><td>90</td></tr>
+<tr><td>Half of 50</td><td><code>50×50%</code></td><td>25</td></tr>
+</table>
+<p>For more percentage questions, such as finding what percent one number is of another or calculating a percentage change, use our <a href="{{ '/percentage.html' | relative_url }}">percentage calculator</a>.</p>
+<h2>Keyboard shortcuts</h2>
+<table>
+<tr><th>Key</th><th>Action</th></tr>
+<tr><td>0–9 and .</td><td>Enter numbers</td></tr>
+<tr><td>+ − * /</td><td>Add, subtract, multiply, divide</td></tr>
+<tr><td>Enter or =</td><td>Calculate</td></tr>
+<tr><td>Backspace</td><td>Delete the last character</td></tr>
+<tr><td>Esc</td><td>Clear everything</td></tr>
+</table>
+<h2>Tips for accurate results</h2>
+<ul>
+<li>Use brackets when the order matters. <code>(5+3)×2</code> is 16, while <code>5+3×2</code> is 11.</li>
+<li>Decimals such as 0.1 + 0.2 are rounded sensibly, so you get 0.3 instead of a long string of digits.</li>
+<li>Check the history (top left icon) to review or reuse earlier results.</li>
+<li>Need roots, powers or trigonometry? Open the <a href="{{ '/' | relative_url }}#calculator">scientific calculator</a>.</li>
+</ul>
+<h2>Frequently Asked Questions</h2><details><summary>Can I calculate with negative numbers?</summary><p>Yes. Press the minus key before a number, for example <code>−5+8</code>, or after another operator, for example <code>6×−2</code>.</p></details><details><summary>What happens if I divide by zero?</summary><p>Division by zero has no answer, so the display shows Error. Press AC and start again.</p></details><details><summary>Is there a limit on the number size?</summary><p>Very large or very small results are shown in scientific notation, for example 1.5E21.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I calculate with negative numbers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Press the minus key before a number, for example −5+8, or after another operator, for example 6×−2."}}, {"@type": "Question", "name": "What happens if I divide by zero?", "acceptedAnswer": {"@type": "Answer", "text": "Division by zero has no answer, so the display shows Error. Press AC and start again."}}, {"@type": "Question", "name": "Is there a limit on the number size?", "acceptedAnswer": {"@type": "Answer", "text": "Very large or very small results are shown in scientific notation, for example 1.5E21."}}]}</script></article><h2 class="section-title">More Calculators</h2><div class="cards"><a class="card " href="{{ '/fractions.html' | relative_url }}"><div class="ico"><span class="ico-frac">½<small>0.5</small></span></div><h3>Fractions Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/' | relative_url }}#calculator"><div class="ico"><span class="ico-sci">π √x<br>x² LOG</span></div><h3>Scientific Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/graphing.html' | relative_url }}"><div class="ico"><svg width="90" height="80" viewBox="0 0 90 80" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6v66h74"/><path d="M18 56C26 14 38 14 46 40s20 22 30 -4"/></svg></div><h3>Graphing Calculator</h3><small>MATH</small></a><a class="card blue" href="{{ '/percentage.html' | relative_url }}"><div class="ico"><span class="ico-pct">%</span></div><h3>Percentage Calculator</h3><small>MATH</small></a><a class="card red" href="{{ '/love.html' | relative_url }}"><div class="ico"><svg width="80" height="72" viewBox="0 0 100 90"><path d="M50 86C10 56 2 36 2 24 2 11 12 3 25 3c11 0 20 6 25 15 5-9 14-15 25-15 13 0 23 8 23 21 0 12-8 32-48 62z" fill="currentColor"/></svg></div><h3>Love calculator</h3><small>FUN</small></a></div>

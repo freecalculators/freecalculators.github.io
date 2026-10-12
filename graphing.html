@@ -1,0 +1,38 @@
+---
+layout: default
+title: "Graphing Calculator Online - Plot Functions Free"
+description: "Free online graphing calculator. Plot up to three functions of x, zoom and pan, and read coordinates. Works on desktop and mobile."
+nav: graphing
+calc: graphing
+scripts: [engine.js, graph.js]
+---
+<section class="page-hero"><h1>Graphing Calculator</h1><p class="lead">Plot up to three functions at once. Drag to move, scroll or pinch buttons to zoom.</p></section>
+<div class="tool graph-tool"><div class="fn-row"><span class="dot" style="background:#2f7fd6"></span><label for="f0">y =</label><input class="fn-input" id="f0" value="sin(x)" placeholder="e.g. x^3 - 2x" autocomplete="off" spellcheck="false"><span class="fn-msg"></span></div><div class="fn-row"><span class="dot" style="background:#d9534f"></span><label for="f1">y =</label><input class="fn-input" id="f1" value="x^2/4" placeholder="e.g. x^3 - 2x" autocomplete="off" spellcheck="false"><span class="fn-msg"></span></div><div class="fn-row"><span class="dot" style="background:#2e9e5b"></span><label for="f2">y =</label><input class="fn-input" id="f2" value="" placeholder="e.g. x^3 - 2x" autocomplete="off" spellcheck="false"><span class="fn-msg"></span></div>
+<canvas id="graph" aria-label="Function graph"></canvas>
+<div class="gbar"><button class="btn light" type="button" id="zin">Zoom in +</button><button class="btn light" type="button" id="zout">Zoom out −</button><button class="btn light" type="button" id="zreset">Reset view</button><span id="coords"></span></div>
+</div>
+<article class="content">
+<h2>How to use the graphing calculator</h2>
+<p>Type a formula in terms of <code>x</code> into any of the three boxes and the curve is drawn straight away. Drag the graph to move around and use the mouse wheel or the zoom buttons to see more or less detail. Move your pointer over the graph to read the exact x and y coordinates under it.</p>
+<h2>Supported syntax</h2>
+<table>
+<tr><th>You want</th><th>Type</th></tr>
+<tr><td>Powers</td><td><code>x^2</code>, <code>x^3 - 2x</code></td></tr>
+<tr><td>Multiplication</td><td><code>2x</code> or <code>2*x</code></td></tr>
+<tr><td>Division</td><td><code>1/x</code>, <code>(x+1)/(x-1)</code></td></tr>
+<tr><td>Roots and absolute value</td><td><code>sqrt(x)</code>, <code>abs(x)</code></td></tr>
+<tr><td>Trigonometry (radians)</td><td><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code></td></tr>
+<tr><td>Logarithms and exponentials</td><td><code>ln(x)</code>, <code>log(x)</code>, <code>e^x</code>, <code>exp(x)</code></td></tr>
+<tr><td>Constants</td><td><code>pi</code>, <code>e</code></td></tr>
+</table>
+<div class="callout"><strong>Note:</strong> trigonometric functions on this graph use radians, so the sine wave repeats every 2π ≈ 6.28 units.</div>
+<h2>Things to try</h2>
+<ul>
+<li><code>x^2</code> draws a parabola. Add <code>x^2 - 4</code> to see it shift down by 4 and cross the x-axis at −2 and 2.</li>
+<li><code>sin(x)</code> and <code>cos(x)</code> together show how the two waves are shifted by a quarter turn.</li>
+<li><code>1/x</code> shows a hyperbola with a break at x = 0.</li>
+<li><code>abs(x)</code> gives a V shape, and <code>sqrt(x)</code> only exists for x ≥ 0.</li>
+</ul>
+<h2>Reading a graph</h2>
+<p>Where a curve crosses the x-axis, the function equals zero. These points are called roots or zeros and they are the solutions of the equation f(x) = 0. Where it crosses the y-axis is the y-intercept, found by putting x = 0. Peaks and valleys are local maximum and minimum points, and where two curves cross, both functions have the same value, which solves an equation such as x² = 2x + 3.</p>
+<h2>Frequently Asked Questions</h2><details><summary>Why is part of my graph missing?</summary><p>Some functions are not defined everywhere. For example sqrt(x) and ln(x) need positive values, and 1/x is undefined at 0. The calculator leaves gaps where the result does not exist.</p></details><details><summary>Can I plot an equation like y = 2x + 1?</summary><p>Yes, type just <code>2x + 1</code>. A leading <code>y=</code> is also accepted.</p></details><details><summary>How do I zoom on a phone?</summary><p>Use the Zoom in and Zoom out buttons below the graph, and drag with one finger to move the view.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is part of my graph missing?", "acceptedAnswer": {"@type": "Answer", "text": "Some functions are not defined everywhere. For example sqrt(x) and ln(x) need positive values, and 1/x is undefined at 0. The calculator leaves gaps where the result does not exist."}}, {"@type": "Question", "name": "Can I plot an equation like y = 2x + 1?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, type just 2x + 1. A leading y= is also accepted."}}, {"@type": "Question", "name": "How do I zoom on a phone?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Zoom in and Zoom out buttons below the graph, and drag with one finger to move the view."}}]}</script></article><h2 class="section-title">More Calculators</h2><div class="cards"><a class="card " href="{{ '/standard.html' | relative_url }}"><div class="ico"><div class="ico-std"><span>×</span><span>=</span><span></span><span>−</span><span>÷</span><span>+</span></div></div><h3>Standard Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/fractions.html' | relative_url }}"><div class="ico"><span class="ico-frac">½<small>0.5</small></span></div><h3>Fractions Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/' | relative_url }}#calculator"><div class="ico"><span class="ico-sci">π √x<br>x² LOG</span></div><h3>Scientific Calculator</h3><small>MATH</small></a><a class="card blue" href="{{ '/percentage.html' | relative_url }}"><div class="ico"><span class="ico-pct">%</span></div><h3>Percentage Calculator</h3><small>MATH</small></a><a class="card red" href="{{ '/love.html' | relative_url }}"><div class="ico"><svg width="80" height="72" viewBox="0 0 100 90"><path d="M50 86C10 56 2 36 2 24 2 11 12 3 25 3c11 0 20 6 25 15 5-9 14-15 25-15 13 0 23 8 23 21 0 12-8 32-48 62z" fill="currentColor"/></svg></div><h3>Love calculator</h3><small>FUN</small></a></div>

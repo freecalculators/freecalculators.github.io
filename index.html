@@ -1,0 +1,67 @@
+---
+layout: default
+title: "Scientific Calculator Online - Free"
+description: "Free online scientific calculator with trigonometry, logarithms, powers, roots, factorial, history and degree/radian modes. Fast and works on any device."
+nav: home
+calc: scientific
+scripts: [engine.js, calc.js]
+---
+<section class="page-hero"><h1>Free Online Scientific Calculator</h1><p class="lead">Trigonometry, logarithms, powers, roots and factorials in one clean calculator. Works on phone, tablet and desktop.</p></section><div class="calc-wrap"><div class="calc" id="calculator"><div class="disp"><div class="disp-bar"><button type="button" class="hist-btn" aria-label="History" title="History">&#x21BA;</button>
+<button type="button" class="del-btn" aria-label="Backspace" title="Backspace">&#x232B;</button></div>
+<div class="disp-expr" aria-live="polite"></div><div class="disp-main" aria-live="polite">0</div></div>
+<div class="hist-panel" hidden></div><div class="keys"><div class="seg"><button type="button" class="deg active" data-k="deg">Deg</button><span class="sep"></span><button type="button" class="rad" data-k="rad">Rad</button></div><button type="button" class="key fn" data-k="!">x!</button><button type="button" class="key fn" data-k="(">(</button><button type="button" class="key fn" data-k=")">)</button><button type="button" class="key fn" data-k="%">%</button><button type="button" class="key fn" data-k="AC">AC</button><button type="button" class="key fn" data-k="inv">Inv</button><button type="button" class="key fn" data-k="sin(" data-inv="asin(" data-label="sin" data-inv-label="sin&lt;sup&gt;−1&lt;/sup&gt;">sin</button><button type="button" class="key fn" data-k="ln(" data-inv="e^(" data-label="ln" data-inv-label="e&lt;sup&gt;x&lt;/sup&gt;">ln</button><button type="button" class="key " data-k="7">7</button><button type="button" class="key " data-k="8">8</button><button type="button" class="key " data-k="9">9</button><button type="button" class="key fn" data-k="÷">÷</button><button type="button" class="key fn" data-k="π">π</button><button type="button" class="key fn" data-k="cos(" data-inv="acos(" data-label="cos" data-inv-label="cos&lt;sup&gt;−1&lt;/sup&gt;">cos</button><button type="button" class="key fn" data-k="log(" data-inv="10^(" data-label="log" data-inv-label="10&lt;sup&gt;x&lt;/sup&gt;">log</button><button type="button" class="key " data-k="4">4</button><button type="button" class="key " data-k="5">5</button><button type="button" class="key " data-k="6">6</button><button type="button" class="key fn" data-k="×">×</button><button type="button" class="key fn" data-k="e">e</button><button type="button" class="key fn" data-k="tan(" data-inv="atan(" data-label="tan" data-inv-label="tan&lt;sup&gt;−1&lt;/sup&gt;">tan</button><button type="button" class="key fn" data-k="√(" data-inv="^2" data-label="√" data-inv-label="x&lt;sup&gt;2&lt;/sup&gt;">√</button><button type="button" class="key " data-k="1">1</button><button type="button" class="key " data-k="2">2</button><button type="button" class="key " data-k="3">3</button><button type="button" class="key fn" data-k="−">−</button><button type="button" class="key fn" data-k="Ans">Ans</button><button type="button" class="key fn" data-k="EXP">EXP</button><button type="button" class="key fn" data-k="^">x<sup>y</sup></button><button type="button" class="key " data-k="0">0</button><button type="button" class="key " data-k=".">.</button><button type="button" class="key eq" data-k="=">=</button><button type="button" class="key fn" data-k="+">+</button></div></div></div><h2 class="section-title">Most Popular Calculators</h2><div class="cards"><a class="card " href="{{ '/standard.html' | relative_url }}"><div class="ico"><div class="ico-std"><span>×</span><span>=</span><span></span><span>−</span><span>÷</span><span>+</span></div></div><h3>Standard Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/fractions.html' | relative_url }}"><div class="ico"><span class="ico-frac">½<small>0.5</small></span></div><h3>Fractions Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/' | relative_url }}#calculator"><div class="ico"><span class="ico-sci">π √x<br>x² LOG</span></div><h3>Scientific Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/graphing.html' | relative_url }}"><div class="ico"><svg width="90" height="80" viewBox="0 0 90 80" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6v66h74"/><path d="M18 56C26 14 38 14 46 40s20 22 30 -4"/></svg></div><h3>Graphing Calculator</h3><small>MATH</small></a><a class="card blue" href="{{ '/percentage.html' | relative_url }}"><div class="ico"><span class="ico-pct">%</span></div><h3>Percentage Calculator</h3><small>MATH</small></a><a class="card red" href="{{ '/love.html' | relative_url }}"><div class="ico"><svg width="80" height="72" viewBox="0 0 100 90"><path d="M50 86C10 56 2 36 2 24 2 11 12 3 25 3c11 0 20 6 25 15 5-9 14-15 25-15 13 0 23 8 23 21 0 12-8 32-48 62z" fill="currentColor"/></svg></div><h3>Love calculator</h3><small>FUN</small></a></div>
+{% if site.posts.size > 0 %}
+<h2 class="section-title">Latest Articles</h2>
+<div class="post-list">
+{% for post in site.posts limit: 3 %}
+<a class="post-card" href="{{ post.url | relative_url }}">
+<span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+<h3>{{ post.title }}</h3>
+<p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 28 }}{% endif %}</p>
+</a>
+{% endfor %}
+</div>
+<p><a href="{{ '/blog/' | relative_url }}">View all articles &rarr;</a></p>
+{% endif %}
+
+<article class="content">
+<h2>How to use this scientific calculator</h2>
+<p>This calculator works like a pocket scientific calculator, but it reads whole expressions the way you write them on paper. Type a full expression such as <code>2+3×4</code> and press <strong>=</strong>. Multiplication and division are done before addition and subtraction, and brackets always come first, so the answer is 14, not 20. You can click the on-screen buttons or use your keyboard: digits, <code>+ − * /</code>, <code>^</code>, <code>(</code> <code>)</code>, <code>!</code>, <code>%</code>, <kbd>Enter</kbd> for equals, <kbd>Backspace</kbd> to delete and <kbd>Esc</kbd> to clear everything.</p>
+<p>The small icon at the top left opens your history. Tap any earlier result to bring it back into the display. The arrow icon at the top right deletes one character or one whole function name at a time.</p>
+
+<h2>What every button does</h2>
+<dl>
+<dt>Deg / Rad</dt><dd>Chooses the unit for trigonometric functions. Use Deg for angles in degrees (for example 30°) and Rad for radians (for example π/6).</dd>
+<dt>sin, cos, tan</dt><dd>The basic trigonometric functions. Press <strong>Inv</strong> first to get the inverse functions sin<sup>−1</sup>, cos<sup>−1</sup> and tan<sup>−1</sup>, which return an angle.</dd>
+<dt>ln and log</dt><dd><code>ln</code> is the natural logarithm (base e) and <code>log</code> is the common logarithm (base 10). With Inv they become e<sup>x</sup> and 10<sup>x</sup>.</dd>
+<dt>√ and x<sup>y</sup></dt><dd>The square root and the power key. <code>2^10</code> gives 1024. With Inv, the root key turns into x² for quick squaring.</dd>
+<dt>x!</dt><dd>Factorial: the product of all whole numbers from 1 up to n. For example <code>5!</code> = 120. It works for whole numbers up to 170.</dd>
+<dt>π and e</dt><dd>The constants pi (3.14159…) and Euler’s number (2.71828…).</dd>
+<dt>EXP</dt><dd>Scientific notation. Typing <code>2 EXP 3</code> means 2 × 10³ = 2000, which is handy for very large or very small numbers.</dd>
+<dt>Ans</dt><dd>Inserts the result of your last calculation so you can use it in the next one.</dd>
+<dt>%</dt><dd>Turns a number into a percentage, so <code>50%</code> becomes 0.5. After a plus or minus it works on the first number, so <code>200+10%</code> gives 220.</dd>
+</dl>
+
+<h2>Worked examples</h2>
+<table>
+<tr><th>You type</th><th>Mode</th><th>Result</th></tr>
+<tr><td><code>sin(30)</code></td><td>Deg</td><td>0.5</td></tr>
+<tr><td><code>cos(π)</code></td><td>Rad</td><td>−1</td></tr>
+<tr><td><code>√(144)+2^3</code></td><td>any</td><td>20</td></tr>
+<tr><td><code>log(1000)</code></td><td>any</td><td>3</td></tr>
+<tr><td><code>5!</code></td><td>any</td><td>120</td></tr>
+<tr><td><code>2(3+4)</code></td><td>any</td><td>14</td></tr>
+<tr><td><code>sin<sup>−1</sup>(1)</code> (press Inv, then sin)</td><td>Deg</td><td>90</td></tr>
+</table>
+<div class="callout"><strong>Tip:</strong> if sin(30) gives a strange value such as −0.988, your calculator is in Rad mode. Switch to Deg and try again.</div>
+
+<h2>Degrees or radians?</h2>
+<p>Degrees split a full circle into 360 parts and are common in school geometry and everyday measurements. Radians measure an angle by the length of the arc it covers on a circle of radius 1, so a full circle is 2π. Higher mathematics, physics and programming mostly use radians. To convert, multiply degrees by π/180 to get radians, or multiply radians by 180/π to get degrees.</p>
+
+<h2>Order of operations</h2>
+<p>The calculator follows the standard rules (often remembered as BODMAS or PEMDAS): brackets, then powers and roots, then multiplication and division from left to right, then addition and subtraction from left to right. Powers are evaluated from right to left, so <code>2^3^2</code> equals 2^9 = 512. A minus sign in front of a power applies after the power, so <code>−2^2</code> equals −4. If you leave a bracket open at the end, it is closed for you.</p>
+
+<h2>Who uses a scientific calculator?</h2>
+<p>Students use it for trigonometry, logarithms and algebra homework. Engineers and technicians use it for quick checks on formulas. Anyone who works with percentages, powers or scientific notation, from finance to cooking, can save time with it. Because everything runs inside your browser, results appear instantly and nothing you type is sent to a server.</p>
+
+<h2>Frequently Asked Questions</h2><details><summary>Is this scientific calculator free?</summary><p>Yes. It is completely free, needs no sign-up and has no usage limit.</p></details><details><summary>Why do I get “Error”?</summary><p>Error appears when the expression cannot be calculated, for example dividing by zero, taking the square root of a negative number, the logarithm of zero or a negative number, or tan(90) in Deg mode. Check the expression, press AC and try again.</p></details><details><summary>How accurate are the results?</summary><p>Calculations use standard double-precision arithmetic and results are shown with up to 12 significant digits, which is more than enough for school and everyday work.</p></details><details><summary>Can I use it on my phone?</summary><p>Yes. The layout adapts to small screens, and the keys stay large enough to tap comfortably.</p></details><details><summary>Does it save my calculations?</summary><p>The history lives only in your current browser tab. Refreshing the page clears it, and nothing is uploaded.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this scientific calculator free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is completely free, needs no sign-up and has no usage limit."}}, {"@type": "Question", "name": "Why do I get “Error”?", "acceptedAnswer": {"@type": "Answer", "text": "Error appears when the expression cannot be calculated, for example dividing by zero, taking the square root of a negative number, the logarithm of zero or a negative number, or tan(90) in Deg mode. Check the expression, press AC and try again."}}, {"@type": "Question", "name": "How accurate are the results?", "acceptedAnswer": {"@type": "Answer", "text": "Calculations use standard double-precision arithmetic and results are shown with up to 12 significant digits, which is more than enough for school and everyday work."}}, {"@type": "Question", "name": "Can I use it on my phone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The layout adapts to small screens, and the keys stay large enough to tap comfortably."}}, {"@type": "Question", "name": "Does it save my calculations?", "acceptedAnswer": {"@type": "Answer", "text": "The history lives only in your current browser tab. Refreshing the page clears it, and nothing is uploaded."}}]}</script></article>

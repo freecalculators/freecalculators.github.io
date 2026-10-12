@@ -1,0 +1,39 @@
+---
+layout: default
+title: "Percentage Calculator - Percent of, Change, Add & Subtract"
+description: "Free percentage calculator: find X% of a number, what percent one number is of another, percentage change, and add or subtract a percentage."
+nav: percentage
+calc: percentage
+scripts: [percent.js]
+---
+<section class="page-hero"><h1>Percentage Calculator</h1><p class="lead">Solve the four most common percentage problems instantly: percent of a number, what percent, percentage change, and add or subtract a percent.</p></section><div class="pgrid"><div class="pbox" data-mode="of"><h2>What is X% of Y?</h2><div class="row">
+<label class="sr-only">Percent</label><input name="a" type="number" step="any" value="15" aria-label="Percent"> <span>% of</span>
+<input name="b" type="number" step="any" value="240" aria-label="Number"> <span></span></div><div class="p-result" aria-live="polite"></div></div><div class="pbox" data-mode="is"><h2>X is what % of Y?</h2><div class="row">
+<label class="sr-only">Value</label><input name="a" type="number" step="any" value="45" aria-label="Value"> <span>is what % of</span>
+<input name="b" type="number" step="any" value="180" aria-label="Total"> <span></span></div><div class="p-result" aria-live="polite"></div></div><div class="pbox" data-mode="change"><h2>% change from X to Y</h2><div class="row">
+<label class="sr-only">From</label><input name="a" type="number" step="any" value="80" aria-label="From"> <span>to</span>
+<input name="b" type="number" step="any" value="100" aria-label="To"> <span></span></div><div class="p-result" aria-live="polite"></div></div><div class="pbox" data-mode="add"><h2>Add or subtract X% from Y</h2><div class="row">
+<label class="sr-only">Percent</label><input name="a" type="number" step="any" value="18" aria-label="Percent"> <span>% of</span>
+<input name="b" type="number" step="any" value="500" aria-label="Number"> <span></span></div><div class="p-result" aria-live="polite"></div></div></div>
+<article class="content">
+<h2>How percentages work</h2>
+<p>A percentage is a fraction out of 100. The word comes from the Latin “per centum”, meaning “by the hundred”, so 25% means 25 out of every 100, or 0.25 as a decimal. Percentages make it easy to compare amounts of different sizes, which is why they appear in discounts, interest rates, exam marks, taxes and statistics.</p>
+<h2>The four formulas</h2>
+<table>
+<tr><th>Question</th><th>Formula</th><th>Example</th></tr>
+<tr><td>X% of Y</td><td>Y × X ÷ 100</td><td>15% of 240 = 36</td></tr>
+<tr><td>X is what % of Y</td><td>X ÷ Y × 100</td><td>45 of 180 = 25%</td></tr>
+<tr><td>% change from X to Y</td><td>(Y − X) ÷ X × 100</td><td>80 to 100 = +25%</td></tr>
+<tr><td>Add or subtract X% to Y</td><td>Y × (1 ± X ÷ 100)</td><td>500 + 18% = 590</td></tr>
+</table>
+<h2>Everyday uses</h2>
+<ul>
+<li><strong>Discounts:</strong> a jacket costs 2,500 with 30% off. Use the last calculator with 30 and 2500 and read the “Subtract” line: 1,750.</li>
+<li><strong>Tax and tips:</strong> adding a 5% service charge to a bill of 1,200 gives 1,260.</li>
+<li><strong>Marks:</strong> scoring 42 out of 60 is 70%, found with “X is what % of Y”.</li>
+<li><strong>Growth:</strong> if your savings grew from 8,000 to 9,200, the percentage change is +15%.</li>
+</ul>
+<h2>Percentage increase vs percentage points</h2>
+<p>Do not confuse a percentage change with a change in percentage points. If an interest rate rises from 4% to 6%, it has gone up by 2 percentage points, but it has increased by 50% in relative terms. Always check which one a statement means.</p>
+<div class="callout"><strong>Remember:</strong> a 50% increase followed by a 50% decrease does not bring you back to the start. 100 becomes 150, and 50% of 150 is 75, so you end up at 75.</div>
+<h2>Frequently Asked Questions</h2><details><summary>How do I find the original price before a discount?</summary><p>Divide the discounted price by (1 − discount ÷ 100). For example, a price of 1,750 after a 30% discount came from 1,750 ÷ 0.70 = 2,500.</p></details><details><summary>Can a percentage be more than 100%?</summary><p>Yes. 150% means one and a half times the original amount. Growth figures often exceed 100%.</p></details><details><summary>Why does the percentage change need a starting value that is not zero?</summary><p>Percentage change compares the difference with the starting value. If the starting value is zero, the comparison is undefined.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find the original price before a discount?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the discounted price by (1 − discount ÷ 100). For example, a price of 1,750 after a 30% discount came from 1,750 ÷ 0.70 = 2,500."}}, {"@type": "Question", "name": "Can a percentage be more than 100%?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. 150% means one and a half times the original amount. Growth figures often exceed 100%."}}, {"@type": "Question", "name": "Why does the percentage change need a starting value that is not zero?", "acceptedAnswer": {"@type": "Answer", "text": "Percentage change compares the difference with the starting value. If the starting value is zero, the comparison is undefined."}}]}</script></article><h2 class="section-title">More Calculators</h2><div class="cards"><a class="card " href="{{ '/standard.html' | relative_url }}"><div class="ico"><div class="ico-std"><span>×</span><span>=</span><span></span><span>−</span><span>÷</span><span>+</span></div></div><h3>Standard Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/fractions.html' | relative_url }}"><div class="ico"><span class="ico-frac">½<small>0.5</small></span></div><h3>Fractions Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/' | relative_url }}#calculator"><div class="ico"><span class="ico-sci">π √x<br>x² LOG</span></div><h3>Scientific Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/graphing.html' | relative_url }}"><div class="ico"><svg width="90" height="80" viewBox="0 0 90 80" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6v66h74"/><path d="M18 56C26 14 38 14 46 40s20 22 30 -4"/></svg></div><h3>Graphing Calculator</h3><small>MATH</small></a><a class="card red" href="{{ '/love.html' | relative_url }}"><div class="ico"><svg width="80" height="72" viewBox="0 0 100 90"><path d="M50 86C10 56 2 36 2 24 2 11 12 3 25 3c11 0 20 6 25 15 5-9 14-15 25-15 13 0 23 8 23 21 0 12-8 32-48 62z" fill="currentColor"/></svg></div><h3>Love calculator</h3><small>FUN</small></a></div>

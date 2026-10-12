@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="content post">
+<p class="crumbs"><a href="{{ '/blog/' | relative_url }}">Blog</a> &rsaquo; {{ page.title }}</p>
+<h1>{{ page.title }}</h1>
+<p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> &middot; {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</p>
+
+{{ content }}
+
+<div class="callout post-cta">
+<strong>Try our free calculators:</strong>
+{% if page.calcs %}{% for c in site.data.calculators %}{% if page.calcs contains c.slug %}<a href="{{ c.url | relative_url }}" title="{{ c.desc }}">{{ c.name }}</a> &middot; {% endif %}{% endfor %}<a href="{{ '/' | relative_url }}#calculator">All calculators</a>
+{% else %}{% for c in site.data.calculators %}<a href="{{ c.url | relative_url }}">{{ c.name }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}{% endif %}
+</div>
+</article>
+
+{% assign others = 0 %}
+<section class="more-posts">
+<h2 class="section-title">More Articles</h2>
+<div class="post-list">
+{% for p in site.posts %}{% unless p.url == page.url %}{% if others < 3 %}{% assign others = others | plus: 1 %}
+<a class="post-card" href="{{ p.url | relative_url }}">
+<span class="post-date">{{ p.date | date: "%B %-d, %Y" }}</span>
+<h3>{{ p.title }}</h3>
+<p>{% if p.description %}{{ p.description }}{% else %}{{ p.excerpt | strip_html | truncatewords: 28 }}{% endif %}</p>
+</a>
+{% endif %}{% endunless %}{% endfor %}
+</div>
+</section>

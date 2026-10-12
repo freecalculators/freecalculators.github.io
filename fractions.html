@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Fractions Calculator - Add, Subtract, Multiply, Divide"
+description: "Free fractions calculator with step-by-step working. Add, subtract, multiply and divide fractions and mixed numbers and get simplified answers."
+nav: fractions
+calc: fractions
+scripts: [fractions.js]
+---
+<section class="page-hero"><h1>Fractions Calculator</h1><p class="lead">Add, subtract, multiply and divide fractions and mixed numbers. See the simplified answer, the mixed number, the decimal and every step.</p></section>
+<form class="tool" id="fracForm">
+<div class="frac-form"><div class="frac"><div><label for="aw" class="sr-only">First fraction whole</label><input class="whole" id="aw" type="number" step="1" placeholder="whole" aria-label="First fraction whole number"></div>
+<div class="stack"><input id="an" type="number" step="1" value="1" aria-label="First fraction numerator"><hr><input id="ad" type="number" step="1" min="1" value="2" aria-label="First fraction denominator"></div></div>
+<select class="frac-op" id="fop" aria-label="Operation"><option>+</option><option>−</option><option>×</option><option>÷</option></select>
+<div class="frac"><div><label for="bw" class="sr-only">Second fraction whole</label><input class="whole" id="bw" type="number" step="1" placeholder="whole" aria-label="Second fraction whole number"></div>
+<div class="stack"><input id="bn" type="number" step="1" value="1" aria-label="Second fraction numerator"><hr><input id="bd" type="number" step="1" min="1" value="3" aria-label="Second fraction denominator"></div></div></div>
+<div id="fracResult" aria-live="polite"></div>
+</form>
+<article class="content">
+<h2>How to use the fractions calculator</h2>
+<p>Enter the numerator (top number) and denominator (bottom number) of each fraction. If you have a mixed number such as 2 ¾, type 2 in the whole-number box, 3 in the numerator and 4 in the denominator. Choose an operation and the result updates instantly, along with the working.</p>
+<h2>Rules for fraction arithmetic</h2>
+<dl>
+<dt>Adding and subtracting</dt><dd>Fractions need a common denominator. Find the least common multiple (LCM) of the two denominators, rewrite both fractions, then add or subtract the numerators. Example: 1/2 + 1/3 = 3/6 + 2/6 = 5/6.</dd>
+<dt>Multiplying</dt><dd>Multiply the numerators together and the denominators together. Example: 2/3 × 3/4 = 6/12 = 1/2.</dd>
+<dt>Dividing</dt><dd>Flip the second fraction (take its reciprocal) and multiply. Example: 1/2 ÷ 1/4 = 1/2 × 4/1 = 4/2 = 2.</dd>
+<dt>Simplifying</dt><dd>Divide the numerator and denominator by their greatest common divisor (GCD). For 18/24 the GCD is 6, so the simplest form is 3/4.</dd>
+</dl>
+<h2>Improper fractions and mixed numbers</h2>
+<p>An improper fraction has a numerator larger than its denominator, such as 7/4. A mixed number combines a whole number and a proper fraction, so 7/4 is the same as 1 ¾. To convert a mixed number to an improper fraction, multiply the whole number by the denominator, add the numerator and keep the denominator: 2 ¾ becomes (2×4+3)/4 = 11/4. The calculator shows both forms so you can use whichever your teacher or recipe needs.</p>
+<h2>Worked example</h2>
+<p>Add 3/4 and 5/6. The LCM of 4 and 6 is 12, so 3/4 becomes 9/12 and 5/6 becomes 10/12. Adding gives 19/12, which is already in lowest terms. As a mixed number that is 1 7/12, and as a decimal about 1.5833.</p>
+<h2>Where fractions are used</h2>
+<p>Fractions appear in cooking measurements, carpentry and sewing, probability, ratios, music timing and almost every level of school mathematics. Being comfortable with them makes percentages and decimals much easier too.</p>
+<h2>Frequently Asked Questions</h2><details><summary>Can I enter a negative fraction?</summary><p>Yes. Put the minus sign in the numerator, for example −3 over 4. For a negative mixed number, type a negative whole number.</p></details><details><summary>Why does it say the denominator cannot be zero?</summary><p>A fraction with zero in the denominator is undefined, because you cannot split something into zero equal parts.</p></details><details><summary>Does it always simplify the answer?</summary><p>Yes. The final answer is always shown in lowest terms, with the mixed number and decimal beside it.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I enter a negative fraction?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Put the minus sign in the numerator, for example −3 over 4. For a negative mixed number, type a negative whole number."}}, {"@type": "Question", "name": "Why does it say the denominator cannot be zero?", "acceptedAnswer": {"@type": "Answer", "text": "A fraction with zero in the denominator is undefined, because you cannot split something into zero equal parts."}}, {"@type": "Question", "name": "Does it always simplify the answer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The final answer is always shown in lowest terms, with the mixed number and decimal beside it."}}]}</script></article><h2 class="section-title">More Calculators</h2><div class="cards"><a class="card " href="{{ '/standard.html' | relative_url }}"><div class="ico"><div class="ico-std"><span>×</span><span>=</span><span></span><span>−</span><span>÷</span><span>+</span></div></div><h3>Standard Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/' | relative_url }}#calculator"><div class="ico"><span class="ico-sci">π √x<br>x² LOG</span></div><h3>Scientific Calculator</h3><small>MATH</small></a><a class="card " href="{{ '/graphing.html' | relative_url }}"><div class="ico"><svg width="90" height="80" viewBox="0 0 90 80" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6v66h74"/><path d="M18 56C26 14 38 14 46 40s20 22 30 -4"/></svg></div><h3>Graphing Calculator</h3><small>MATH</small></a><a class="card blue" href="{{ '/percentage.html' | relative_url }}"><div class="ico"><span class="ico-pct">%</span></div><h3>Percentage Calculator</h3><small>MATH</small></a><a class="card red" href="{{ '/love.html' | relative_url }}"><div class="ico"><svg width="80" height="72" viewBox="0 0 100 90"><path d="M50 86C10 56 2 36 2 24 2 11 12 3 25 3c11 0 20 6 25 15 5-9 14-15 25-15 13 0 23 8 23 21 0 12-8 32-48 62z" fill="currentColor"/></svg></div><h3>Love calculator</h3><small>FUN</small></a></div>

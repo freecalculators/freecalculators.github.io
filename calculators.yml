@@ -1,0 +1,24 @@
+- slug: scientific
+  name: "Scientific Calculator"
+  url: "/"
+  desc: "Trig, logs, powers, roots and factorials."
+- slug: standard
+  name: "Standard Calculator"
+  url: "/standard.html"
+  desc: "Everyday add, subtract, multiply, divide and percent."
+- slug: fractions
+  name: "Fractions Calculator"
+  url: "/fractions.html"
+  desc: "Add, subtract, multiply and divide fractions with steps."
+- slug: graphing
+  name: "Graphing Calculator"
+  url: "/graphing.html"
+  desc: "Plot up to three functions with pan and zoom."
+- slug: percentage
+  name: "Percentage Calculator"
+  url: "/percentage.html"
+  desc: "Percent of, percent change, add or subtract a percent."
+- slug: love
+  name: "Love Calculator"
+  url: "/love.html"
+  desc: "A fun compatibility score for two names."

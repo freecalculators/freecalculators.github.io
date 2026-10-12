@@ -1,0 +1,12 @@
+{% assign found = 0 %}{% capture related_html %}{% for p in site.posts %}{% if p.calcs contains page.calc %}{% assign found = found | plus: 1 %}
+<a class="post-card" href="{{ p.url | relative_url }}">
+<span class="post-date">{{ p.date | date: "%B %-d, %Y" }}</span>
+<h3>{{ p.title }}</h3>
+<p>{% if p.description %}{{ p.description }}{% else %}{{ p.excerpt | strip_html | truncatewords: 28 }}{% endif %}</p>
+</a>{% endif %}{% endfor %}{% endcapture %}
+{% if found > 0 %}
+<section class="more-posts">
+<h2 class="section-title">Related Articles</h2>
+<div class="post-list">{{ related_html }}</div>
+</section>
+{% endif %}

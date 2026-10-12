@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Blog: Calculator Guides, Formulas and Tips"
+description: "Step-by-step guides on loans, EMI, percentages, fractions and everyday maths, with formulas and worked examples."
+nav: blog
+permalink: /blog/
+---
+<section class="page-hero"><h1>Blog</h1><p class="lead">Guides, formulas and worked examples to help you get the most from our calculators.</p></section>
+
+<div class="post-list wide">
+{% for post in site.posts %}
+<a class="post-card" href="{{ post.url | relative_url }}">
+<span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+<h3>{{ post.title }}</h3>
+<p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 30 }}{% endif %}</p>
+</a>
+{% else %}
+<p>No articles yet. Check back soon.</p>
+{% endfor %}
+</div>

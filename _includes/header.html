@@ -1,0 +1,13 @@
+<header class="site-header"><div class="wrap header-in">
+<a class="logo" href="{{ '/' | relative_url }}"><span class="logo-mark">∑</span>{{ site.title }}</a>
+<button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="main-nav" id="mainNav" aria-label="Main"><a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} class="active"{% endif %}>Home</a>
+<a href="{{ '/standard.html' | relative_url }}"{% if page.nav == 'standard' %} class="active"{% endif %}>Standard</a>
+<a href="{{ '/fractions.html' | relative_url }}"{% if page.nav == 'fractions' %} class="active"{% endif %}>Fractions</a>
+<a href="{{ '/' | relative_url }}#calculator"{% if page.nav == 'scientific' %} class="active"{% endif %}>Scientific</a>
+<a href="{{ '/graphing.html' | relative_url }}"{% if page.nav == 'graphing' %} class="active"{% endif %}>Graphing</a>
+<a href="{{ '/percentage.html' | relative_url }}"{% if page.nav == 'percentage' %} class="active"{% endif %}>Percentage</a>
+<a href="{{ '/love.html' | relative_url }}"{% if page.nav == 'love' %} class="active"{% endif %}>Love</a>
+<a href="{{ '/blog/' | relative_url }}"{% if page.nav == 'blog' %} class="active"{% endif %}>Blog</a>
+</nav>
+</div></header>
